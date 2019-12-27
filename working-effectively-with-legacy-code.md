@@ -67,3 +67,19 @@ The legacy code change algorithm:
 3. Break dependencies
 4. Write test
 5. Make changes and refactor
+
+Chapter3: Sensing & separation
+---
+
+There is generally 2 reasons to break dependencies:
+1. Sensing: break dependencies to _sense_ when we can’t access values our code compute.
+2. Separation: break dependencies to _separate_ when we can’t have a piece of code in a test.
+
+The main tool for sensing would be _fake collaborators_: we would use fake objects to sense the effects of our actions.
+
+Mock objects are subset of fake objects, they do the same but also do some assertion internally.
+
+Mock objects framework are not available on every language.
+
+Chapter4: The seam model
+---
