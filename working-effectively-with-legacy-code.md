@@ -40,7 +40,7 @@ That step is like _Refactoring_, but the goal is different. Here we want to impr
 
 That step only about _Optimizing_ and doesn't change any structure or behaviour.
 
-Chapter2: working with feedback
+Chapter 2: working with feedback
 ---
 
 There is usually 2 ways of working with legacy :
@@ -68,7 +68,7 @@ The legacy code change algorithm:
 4. Write test
 5. Make changes and refactor
 
-Chapter3: Sensing & separation
+Chapter 3: Sensing & separation
 ---
 
 There is generally 2 reasons to break dependencies:
@@ -81,5 +81,21 @@ Mock objects are subset of fake objects, they do the same but also do some asser
 
 Mock objects framework are not available on every language.
 
-Chapter4: The seam model
+Chapter 4: The seam model
+---
+
+The definition of seam is:
+A seam is a place where you can alter behaviour in your program without editing in that place.
+
+The definition of enabling point is:
+Every seam has an enabling point, a place where you can make the decision to use one behaviour or another.
+
+
+There are 3 types of seams:
+
+1. Preprocessing seam:  It is the way to replace methods during the preprocessing of the compilation. It is used for compiled language and interesting to use in C or C++
+2. Link seams: Basically it is creating a new library to include while testing instead of the production library. It would make easier to load test objects instead of production ones.
+3. Object seams: Using the power of Object Oriented languages to be able to modify some call methods to make it easier to test: Using dependency injections, or overwriting methods are the usual things to do.
+
+Chapter 5: Tools
 ---
